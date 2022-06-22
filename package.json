@@ -1,0 +1,46 @@
+{
+    "name": "firstam-foundation",
+    "version": "1.0.0",
+    "description": "Base project to showcase the way automation should be run for First AM mobile team",
+    "scripts": {
+        "android": "wdio ./config/wdio.browserstack.android.conf.js",
+        "ios": "wdio ./config/wdio.browserstack.ios.conf.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/garyb-bs/firstam-wdio-foundation.git"
+    },
+    "keywords": [
+        "WebdriverIO",
+        "WebDriver",
+        "appium",
+        "native app",
+        "android",
+        "ios",
+        "firstam",
+        "browserstack"
+    ],
+    "author": "Gary Behan <gary.b@browserstack.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/garyb-bs/firstam-wdio-foundation/issues"
+    },
+    "homepage": "https://github.com/garyb-bs/firstam-wdio-foundation#readme",
+    "devDependencies": {
+        "@types/chai": "^4.3.1",
+        "@typescript-eslint/eslint-plugin": "^5.25.0",
+        "@typescript-eslint/parser": "^5.25.0",
+        "@wdio/appium-service": "^7.19.5",
+        "@wdio/browserstack-service": "^7.19.7",
+        "@wdio/cli": "^7.19.7",
+        "@wdio/local-runner": "^7.19.7",
+        "@wdio/mocha-framework": "^7.19.7",
+        "@wdio/spec-reporter": "^7.19.7",
+        "babel": "^6.23.0",
+        "chai": "^4.3.6",
+        "eslint-plugin-wdio": "^7.19.4",
+        "mocha": "^10.0.0",
+        "ts-node": "^10.8.0",
+        "typescript": "^4.6.4"
+    }
+}
