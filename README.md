@@ -1,3 +1,5 @@
+![BrowserStack Logo](https://byrnewallace.com/assets/components/images/ourExperience/news_1550502437_8046.png) ![FirstAM Logo](https://cdn.freebiesupply.com/logos/large/2x/first-american-logo-png-transparent.png)
+
 # First AM Insurance Mobile Foundation Project
 
 **NOTE:** This project is built using Webdriver V7 where the tests are written with `async`/`await` and TypeScript.
