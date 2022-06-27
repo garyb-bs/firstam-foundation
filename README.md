@@ -27,10 +27,21 @@ This boilerplate is currently based on:
 
 This foundation project uses a specific config for iOS and Android, see [configs](./config).
 
-Please check the [`wdio.shared.conf.ts`](./config/wdio.shared.conf.ts)-file for the minimal configuration options. Notes are added for why
-a different value has been selected in comparison to the default values WebdriverIO provides.
-
 Since we are running on BrowserStack, we do not need any local instance of Appium installed, we just specify the latest version in our BS capabilities using the `appiumVersion` capability.
+
+## Page Objects
+
+This project utilises the Page Object Model to reduce the amount of duplicated code across the project. See this link for documentation on the Page Object Model in WebDriverIO.
+
+Basically if we are performing the same action more than once, it is best practice to turn that logic into a page object. So in the case of this project, things like [Login](./tests/pageobjects/Login.ts), [Search For Address](./tests/pageobjects/Search.ts), [Notifications testing](./tests/pageobjects/Notifications.ts), [Order Details](./tests/pageobjects/Orders.ts); will all be happening more than once so have been turned into Page Objects.
+
+Each page object class file has a number of methods to perform the logic as well as "get" methods that will return the selector for that property. For example "getSearchSelector" will return the selector value for a Search bar that we can then enter text into.
+
+## Specs
+
+The specs (or test) files are where the logical flow of the tests will be stored. At the moment, they are separated into 2 buckets for [Android](./tests/specs/android) and [iOS](./tests/specs/ios). This is because in some cases, the selectors can be different between App versions. If the App was designed with a uniform design and the selectors are not different then we can streamline the code even more by just having one set of test files and running those on both sets of devices.
+
+The spec files will import the Page Objects that are needed for that specific test. For example, if our spec file is testing the Order Details, then we will need to import the [Orders](./tests/pageobjects/Orders.ts) object.
 
 ## Locator strategy for native apps
 
@@ -72,6 +83,48 @@ Make sure you install the latest version of the `@wdio/browserstack-service` wit
 npm install --save-dev @wdio/browserstack-service
 ```
 
-```
-# firstam-wdio-foundation
-# firstam-wdio-foundation
+## Parallel Testing
+
+This project is set up to run the tests in parallel on multiple devices. So if you kick off 5 files, and your configuration contains 5 devices, then 25 tests will be kicked off in total. We define the devices in our capabilities in [Android Config](./config/wdio.browserstack.android.conf) and [iOS Config](./config/wdio.browserstack.ios.conf) for the different devices. 
+
+Here is an example of the Android device capabilities configured in the Android config.
+
+```js
+  capabilities: [{
+    "appium:deviceName": 'Samsung Galaxy S22 Ultra',
+    "appium:os_version": "12.0"
+  }, {
+    "appium:deviceName": 'Samsung Galaxy S22',
+    "appium:os_version": "12.0"
+  }, {
+    "appium:deviceName": 'Samsung Galaxy S10',
+    "appium:os_version": "9.0"
+  }, {
+    "appium:deviceName": 'Huawei P30',
+    "appium:os_version": "9.0"
+  }, {
+    "appium:os_version" : "10.0",
+    "appium:device" : "Samsung Galaxy Note 20",
+  }],
+  ```
+  
+ And here is the iOS capabilities:
+ 
+ ```js
+ capabilities: [{
+    device: 'iPhone XS',
+    os_version: "15"
+  }, {
+    device: 'iPhone 13 Pro Max',
+    os_version: "15"
+  }, {
+    device: 'iPhone 11',
+    os_version: "13"
+  }],
+  ```
+  
+These devices are just random selections. We recommend looking at your App Dynamics data and seeing what the breakdown is for your app and configuring the capabilities based on the highest usage by your user base.
+
+## Notes
+
+Any questions, please reach out to me at any time
