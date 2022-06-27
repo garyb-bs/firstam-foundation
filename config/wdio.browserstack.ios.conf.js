@@ -1,6 +1,9 @@
 exports.config = {
   user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
   key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
+  appUser: process.env.APP_USERNAME || '',
+  appPassword: process.env.APP_PASSWORD || '',
+  appPin: process.env.APP_PIN || '',
 
   updateJob: false,
   specs: [
@@ -20,7 +23,7 @@ exports.config = {
         // Set other BrowserStack capabilities
         projectName: 'my-firstam-app-foundation-test',
         buildName: 'my-firstam-ios-tests',
-        sessionName: 'my-firstam-app-tests-test',
+        sessionName: 'my-firstam-app-tests-ios-test',
         appiumVersion : "1.22.0",
         realMobile: true
     }
@@ -49,7 +52,31 @@ exports.config = {
   mochaOpts: {
     ui: 'bdd',
     timeout: 20000
-  }
+  },
+
+    /**
+   * Perform any logic that is needed before a test is run.
+   * @param {*} test 
+   * @param {*} context 
+   */
+     beforeTest: function (test, context) {
+      console.log('----------------------------------------------')
+      console.log('Starting the test');
+      console.log('----------------------------------------------')
+    },
+     
+    /**
+     * Once the test is completed, perform any necessary cleanup actions.
+     * @param {*} exitCode 
+     * @param {*} config 
+     * @param {*} capabilities 
+     * @param {*} results 
+     */
+    onComplete: function (exitCode, config, capabilities, results) {
+      console.log('----------------------------------------------')
+      console.log('Test is complete')
+      console.log('----------------------------------------------')
+    }
 };
 
 // Code to support common capabilities

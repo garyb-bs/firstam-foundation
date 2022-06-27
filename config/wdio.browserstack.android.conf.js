@@ -25,7 +25,7 @@ exports.config = {
         // Set other BrowserStack capabilities
         projectName: 'my-firstam-app-foundation-test',
         buildName: 'my-firstam-android-tests',
-        sessionName: 'my-firstam-app-tests-test',
+        sessionName: 'my-firstam-app-tests-android-test',
         appiumVersion : "1.22.0",
         realMobile: true
     }
