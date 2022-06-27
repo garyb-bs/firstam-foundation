@@ -1,4 +1,3 @@
-Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
 ![](https://www.logolynx.com/images/logolynx/27/2747a30cc3e84b077d9ffebb1bee917c.jpeg)  |  ![](https://www.logolynx.com/images/logolynx/e1/e1bacee48a3099b236e2996a6567a07b.jpeg)
 
