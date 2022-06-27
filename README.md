@@ -16,21 +16,21 @@ This boilerplate is currently based on:
 
 ## Installation
 
-1. Running `git clone https://github.com/garyb-bs/firstam-wdio-foundation-.git`
-1. Running `npm install`
-1. Running tests `npm run fx-android-online` or `npm run fx-ios-online` (there are others, see scripts section of package.json for full list)
+1. Open a terminal
+1. Copy the following command into the terminal `git clone https://github.com/garyb-bs/firstam-wdio-foundation.git` (you must have [Git](https://git-scm.com/downloads) installed)
+1. Move into the directory that you just cloned by typing `cd firstam-foundation`
+1. When inside this directory, copy the following command and run it: `npm install`
+1. Once all the dependencies are installed, you will be able to run the tests by using the following commands: `npm run android` or `npm run ios`
+
 
 ## Configuration files
 
-This foundation project uses a specific config for iOS and Android and for each of the 2 apps, see [configs](./config). The configs are based on a shared config
-[`wdio.shared.conf.ts`](./config/wdio.shared.conf.ts).
-This shared config holds **all the defaults** so the iOS and Android configs only need to hold the capabilities and specs that are needed
-for running on iOS and or Android (app or browser).
+This foundation project uses a specific config for iOS and Android, see [configs](./config).
 
 Please check the [`wdio.shared.conf.ts`](./config/wdio.shared.conf.ts)-file for the minimal configuration options. Notes are added for why
 a different value has been selected in comparison to the default values WebdriverIO provides.
 
-Since we are running on BrowserStack, we do not need any local instance of Appium installed, we just specify the latest version in our BS capabilities.
+Since we are running on BrowserStack, we do not need any local instance of Appium installed, we just specify the latest version in our BS capabilities using the `appiumVersion` capability.
 
 ## Locator strategy for native apps
 
@@ -56,15 +56,15 @@ All tests can be executed on the devices as configured in the capabilities laid 
 
 ```sh
 # For Android local execution
-npm run fx-android-online
+npm run android
 
 # For iOS local execution
-npm run fx-ios-online
+npm run ios
 ```
 
 ### BrowserStack
 
-This project is setup for testing your apps with BrowserStack.
+This project is setup for testing your app with BrowserStack.
 
 Make sure you install the latest version of the `@wdio/browserstack-service` with
 
@@ -72,12 +72,6 @@ Make sure you install the latest version of the `@wdio/browserstack-service` wit
 npm install --save-dev @wdio/browserstack-service
 ```
 
-```sh
-# For iOS
-$ npm run fx-android-online
-
-# For Android
-$ npm run fx-ios-online
 ```
 # firstam-wdio-foundation
 # firstam-wdio-foundation
