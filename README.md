@@ -22,11 +22,26 @@ This boilerplate is currently based on:
 ## Installation
 
 1. Open a terminal
-1. Copy the following command into the terminal `git clone https://github.com/garyb-bs/firstam-wdio-foundation.git` (you must have [Git](https://git-scm.com/downloads) installed)
-1. Move into the directory that you just cloned by typing `cd firstam-foundation`
-1. When inside this directory, copy the following command and run it: `npm install`
-1. Once all the dependencies are installed, you will be able to run the tests by using the following commands: `npm run android` or `npm run ios`
+1. Copy the following command into the terminal, (you must have [Git](https://git-scm.com/downloads) installed)
+```sh
+`git clone https://github.com/garyb-bs/firstam-wdio-foundation.git` 
+```
+1. Move into the directory that you just cloned by typing 
+```sh
+cd firstam-foundation
+```
+1. When inside this directory, copy the following command and run it: 
+```sh
+npm install
+```
+1. Once all the dependencies are installed, you will be able to run the tests by using the following commands: 
+```sh
+# Run on Android devices
+npm run android
 
+# Run on iOS devices
+npm run ios
+```
 
 ## Configuration files
 
