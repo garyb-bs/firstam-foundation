@@ -113,7 +113,7 @@ Here is an example of the Android device capabilities configured in the Android 
   }],
   ```
   
- And here is the iOS capabilities:
+ And here are the iOS capabilities:
  
  ```js
  capabilities: [{
@@ -132,4 +132,4 @@ These devices are just random selections. We recommend looking at your App Dynam
 
 ## Notes
 
-Any questions, please reach out to me at any time
+Feel free to pull down the repo and play around and get to grips with how it all works. Breaking it is sometimes the best way to learn! Any questions, please reach out to me at any time.
