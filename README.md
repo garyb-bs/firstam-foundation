@@ -1,4 +1,4 @@
-![BrowserStack Logo](https://byrnewallace.com/assets/components/images/ourExperience/news_1550502437_8046.png) ![FirstAM Logo](https://cdn.freebiesupply.com/logos/large/2x/first-american-logo-png-transparent.png)
+![BrowserStack Logo](https://d13vhgz95ul9hy.cloudfront.net/blog/wp-content/uploads/2018/03/BrowserStack.png) ![FirstAM Logo](https://www.logolynx.com/images/logolynx/e1/e1bacee48a3099b236e2996a6567a07b.jpeg)
 
 # First AM Insurance Mobile Foundation Project
 
