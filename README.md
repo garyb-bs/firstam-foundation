@@ -116,15 +116,15 @@ Here is an example of the Android device capabilities configured in the Android 
  And here are the iOS capabilities:
  
  ```js
- capabilities: [{
-    device: 'iPhone XS',
-    os_version: "15"
+  capabilities: [{
+    "appium:deviceName": 'iPhone XS',
+    "appium:os_version": "15"
   }, {
-    device: 'iPhone 13 Pro Max',
-    os_version: "15"
+    "appium:deviceName": 'iPhone 13 Pro Max',
+    "appium:os_version": "15"
   }, {
-    device: 'iPhone 11',
-    os_version: "13"
+    "appium:deviceName": 'iPhone 11',
+    "appium:os_version": "13"
   }],
   ```
   
