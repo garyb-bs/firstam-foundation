@@ -24,7 +24,7 @@ This boilerplate is currently based on:
 * Open a terminal
 * Copy the following command into the terminal, (you must have [Git](https://git-scm.com/downloads) installed)
 ```sh
-`git clone https://github.com/garyb-bs/firstam-wdio-foundation.git` 
+git clone https://github.com/garyb-bs/firstam-wdio-foundation.git
 ```
 * Move into the directory that you just cloned by typing 
 ```sh
