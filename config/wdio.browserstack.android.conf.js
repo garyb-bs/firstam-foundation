@@ -9,7 +9,7 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './tests/specs/utils/doSearch.ts'
+    './tests/specs/android/*.ts'
   ],
   exclude: [],
 
@@ -23,9 +23,9 @@ exports.config = {
         debug: true,
 
         // Set other BrowserStack capabilities
-        projectName: 'ubs-app-foundation-test',
-        buildName: 'ubs-android-tests',
-        sessionName: 'fx-app-tests-test',
+        projectName: 'my-firstam-app-foundation-test',
+        buildName: 'my-firstam-android-tests',
+        sessionName: 'my-firstam-app-tests-test',
         appiumVersion : "1.22.0",
         realMobile: true
     }
@@ -44,6 +44,9 @@ exports.config = {
   }, {
     "appium:deviceName": 'Huawei P30',
     "appium:os_version": "9.0"
+  }, {
+    "appium:os_version" : "10.0",
+    "appium:device" : "Samsung Galaxy Note 20",
   }],
 
   logLevel: 'info',

@@ -5,12 +5,18 @@ class PropertyDetails {
         
     }
 
+    /**
+     * Verify that the Share Options are displayed
+     */
     async verifyShareOptions () {
         await this.shareIconSelector.waitForDisplayed({ timeout: 30000 });
         
         expect(this.shareIconSelector.isDisplayed).to.be.true;
     }
 
+    /**
+     * Perform an advanced search
+     */
     async advancedSearch () {
         await this.firstNameSelector.waitForDisplayed({ timeout: 30000 });
         await this.firstNameSelector.setValue("First");
@@ -25,58 +31,98 @@ class PropertyDetails {
         await this.searchButtonSelector.click();
     }
 
+    /**
+     * Enable the location services
+     */
     async enableLocation () {
         
     }
 
+    /**
+     * Verify the map types
+     */
     async verifyMapTypes () {
 
     }
 
+    /**
+     * Verify the current location of the logged in user
+     */
     async verifyMyLocation () {
 
     }
 
+    /**
+     * Search the current area
+     */
     async searchCurrentArea () {
 
     }
 
+    /**
+     * Download the PDF
+     */
     async downloadPDF () {
 
     }
 
+    /**
+     * Preview the PDF
+     */
     async previewPDF () {
 
     }
 
+    /**
+     * Share the PDF
+     */
     async sharePDF () {
 
     }
 
+    /**
+     * Create a new farm
+     */
     async createFarm () {
 
     }
 
+    /**
+     * Share a farm
+     */
     async shareFarm () {
 
     }
 
+    /**
+     * Share a farm on the map
+     */
     async shareFarmOnMap () {
 
     }
 
+    /**
+     * View the details of a property on the map
+     */
     async viewPropertyDetailsOnMap () {
 
     }
 
+    /**
+     * View the charges
+     */
     async viewCharges () {
 
     }
 
+    /**
+     * View the recently viewed items
+     */
     async viewRecentlyViewed () {
 
     }
 
+    // Various getter methods for all of the selectors that will be used in this Object
     get shareIconSelector () { return $('android=new UiSelector().resourceId("org.wikipedia.alpha:id/search_src_text")') };
     get firstNameSelector () { return $('android=new UiSelector().resourceId("org.wikipedia.alpha:id/search_src_text")') };
     get lastNameSelector () { return $('android=new UiSelector().resourceId("org.wikipedia.alpha:id/search_src_text")') };
