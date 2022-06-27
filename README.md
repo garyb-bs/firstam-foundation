@@ -49,6 +49,17 @@ This foundation project uses a specific config for iOS and Android, see [configs
 
 Since we are running on BrowserStack, we do not need any local instance of Appium installed, we just specify the latest version in our BS capabilities using the `appiumVersion` capability.
 
+## Environment Variables
+
+You can export the environment variables for the Username and Access Key of your BrowserStack account
+  
+```sh
+export BROWSERSTACK_USERNAME=<browserstack-username> &&
+export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
+```
+
+This will allow the config files to pick up the correct credentials when running the tests.
+
 ## Page Objects
 
 This project utilises the Page Object Model to reduce the amount of duplicated code across the project. See this link for documentation on the Page Object Model in WebDriverIO.
