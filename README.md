@@ -1,5 +1,7 @@
 ![BrowserStack Logo](https://d13vhgz95ul9hy.cloudfront.net/blog/wp-content/uploads/2018/03/BrowserStack.png) ![FirstAM Logo](https://www.logolynx.com/images/logolynx/e1/e1bacee48a3099b236e2996a6567a07b.jpeg)
 
+<a href="url"><img src="http://url.to/image.png" align="left" height="48" width="48" ></a>
+
 # First AM Insurance Mobile Foundation Project
 
 **NOTE:** This project is built using Webdriver V7 where the tests are written with `async`/`await` and TypeScript.
